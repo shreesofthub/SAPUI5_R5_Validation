@@ -1,0 +1,46 @@
+<mvc:View controllerName="r5validation.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:c="sap.ui.core">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <Panel id="idPanl1" headerText="Mandatory Field Validation" expandable="false">
+                        <VBox id="idVb1">
+                            <HBox id="idHb1" class="sapUiSmallMargin">
+                                <Label id="idEidL" text="Employee ID" required="true" class="sapUiTinyMargin"/>
+                                <Input id="idEidI"></Input>
+                            </HBox>
+                            <HBox id="idHb2">
+                                <Button id="idBtn1" width="100%" text="Submit" type="Emphasized" press="onSubmit" class="sapUiLargeMarginBegin"/>
+                            </HBox>
+                        </VBox>
+                    </Panel>
+                    <Panel id="idPanel2" headerText="Data Format validation" expandable="false">
+                        <f:SimpleForm id="idSF1" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" columnsL="2" columnsM="2">
+                            <c:Title id="idTitl1" text="Numeric-Length Validation"></c:Title>
+                            <Label id="idEidL1" text="Employee ID" required="true" class="sapUiTinyMargin"/>
+                            <Input id="idEidI1" maxLength="8"></Input>
+                            <Label id="idLbl1"></Label>
+                            <Button id="idBtn2" text="Submit" type="Accept" press='onAccept' width="30%"/>
+                            <c:Title id="idTitl2" text="Alpha Numeric validation"></c:Title>
+                            <Label id="idEidL2" text="Employee ID with Designation" required="true" class="sapUiTinyMargin"/>
+                            <Input id="idEidI2" maxLength="15"></Input>
+                            <Label id="idLbl2"></Label>
+                            <Button id="idBtn3" text="Submit" type="Default" press='onOk' width="30%"/>                            
+                        </f:SimpleForm>
+                    </Panel>
+                    <Panel id="idPanel3" headerText="Data Existance Validation" expandable="false">
+                        <FlexBox id="idFlex">
+                            <Label id="idEidL4" text="Product Id" required="true" class="sapUiTinyMargin"/>
+                            <Input id="idEidI4" maxLength="8"></Input>
+                            <Button id="idBtn4" width="100%" text="Data Validate" type="Transparent" press="onValidation"/>
+                        </FlexBox>
+                    </Panel>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
